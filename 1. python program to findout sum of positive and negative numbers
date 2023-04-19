@@ -1,0 +1,14 @@
+##positive and negetive
+a=[1,3,-5,-7,20,-6,23]
+
+Sum = 0
+Sum1 = 0
+
+
+for i in a:
+  if i>=0:
+         Sum = Sum + i
+  else:
+        Sum1 =  Sum1 + i
+print("positive numbers in the list: ",Sum1)
+print("negative numbers in the list ",Sum)
