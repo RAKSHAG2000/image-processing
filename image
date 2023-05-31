@@ -1,0 +1,27 @@
+ #Python program for adding
+# images using OpenCV
+
+# import OpenCV file
+import cv2
+
+# Read Image1
+flower = cv2.imread('1.jpg')
+
+
+# Read image2
+yellow = cv2.imread('2.jpg')
+print(flower.shape)
+print(yellow.shape)
+# Add the images
+img = cv2.add(flower, yellow)
+
+# Show the image
+cv2.imshow('image', img)
+
+# Wait for a key
+cv2.waitKey(0)
+
+# Distroy all the window open
+cv2.destroyAllWindows()
+
+
