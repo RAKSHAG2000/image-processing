@@ -1,0 +1,11 @@
+import cv2
+image = cv2.imread("tshirt.png")
+text = "wish"
+coordinates = (360,400)
+font = cv2.FONT_HERSHEY_SIMPLEX
+fontScale = 1
+color = (230,0,0)
+thickness = 2
+image = cv2.putText(image, text, coordinates, font, fontScale, color, thickness, cv2.LINE_AA)
+cv2.imshow("Text", image)
+cv2.waitKey(0)
