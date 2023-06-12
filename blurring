@@ -21,3 +21,14 @@ bilateral = cv2.bilateralFilter(image, 9, 75, 75)
 cv2.imshow('Bilateral Blurring', bilateral)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+
+
+import cv2
+img=cv2.imread("flower3.jpg")
+cv2.imshow("unblurred",img)
+blur=cv2.medianBlur(img,15)
+cv2.imshow("blurred",blur)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
