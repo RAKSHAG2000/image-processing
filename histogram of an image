@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import cv2
+image = cv2.imread('redcar.png')
+plt.axis("on")
+plt.title("Original Image")
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.show()
+blue_histogram = cv2.calcHist([image], [0], None, [256], [0, 256])
+red_histogram = cv2.calcHist([image], [1], None, [256], [0, 256])
+green_histogram = cv2.calcHist([image], [2], None, [256], [0, 256])
+ 
+plt.subplot(3,1,1)
+plt.title("histogram of Blue")
+plt.hist(blue_histogram,color="darkblue")
+ 
+plt.subplot(3,1,2)
+plt.title("histogram of Green")
+plt.hist(green_histogram,color="green")
+ 
+plt.subplot(3,1,3)
+plt.title("histogram of Red")
+plt.hist(red_histogram,color="red")
+ 
+plt.tight_layout()
+plt.show()
