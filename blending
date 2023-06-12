@@ -1,0 +1,13 @@
+import cv2
+# Read our Image1
+My_first = cv2.imread('1.jpg',1)
+# Reading ourImage2
+My_second = cv2.imread('2.jpg',1)
+# Blending the images with 0.3 and 0.7
+My_img = cv2.addWeighted(My_first, 0.3, My_second, 0.7, 0)
+# Show the image
+cv2.imshow('image', My_img)
+# Wait for a key
+cv2.waitKey(0)
+# Destroy all the window open
+cv2.destroyAllWindows()
