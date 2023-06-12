@@ -1,0 +1,5 @@
+#using the imagefiltering
+from PIL import Image, ImageFilter
+image = Image.open('flower3.jpg')
+edges_image = image.filter(ImageFilter.FIND_EDGES)
+edges_image.show()
