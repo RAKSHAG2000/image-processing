@@ -14,3 +14,10 @@ im2 = im1.filter(ImageFilter.SHARPEN)
 im2.show()
 
 
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+ # creating a image object
+im1 = Image.open("flower3.jpg")
+ # applying the contour filter
+im2 = im1.filter(ImageFilter.CONTOUR)
+im2.show()
