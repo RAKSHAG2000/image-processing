@@ -3,3 +3,14 @@ from PIL import Image, ImageFilter
 image = Image.open('flower3.jpg')
 edges_image = image.filter(ImageFilter.FIND_EDGES)
 edges_image.show()
+
+
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+ # creating a image object
+im1 = Image.open("flower3.jpg")
+ # applying the SHARPEN filter
+im2 = im1.filter(ImageFilter.SHARPEN)
+im2.show()
+
+
